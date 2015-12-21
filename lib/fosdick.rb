@@ -2,6 +2,7 @@ require "fosdick/version"
 require "fosdick/configuration"
 require "fosdick/errors"
 require "fosdick/inventory"
+require "fosdick/return"
 
 require "faraday"
 require "json"
