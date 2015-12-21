@@ -5,6 +5,7 @@ require "fosdick/inventory"
 require "fosdick/return"
 require "fosdick/tracking"
 require "fosdick/shipment"
+require "fosdick/shipment_detail"
 
 require "faraday"
 require "json"
