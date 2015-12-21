@@ -2,11 +2,13 @@ require "spec_helper"
 
 describe Fosdick::ShipmentDetail do
   describe ".all", :vcr do
-    it "gets details of shipments shipped since a timestamp", :vcr do
-      data = Fosdick::Shipment.all(shipped_on_min: "2010-02-24T12:17:09-05:00", per_page: 3)
+    context "given shipped_on_min" do
+      it "gets details of shipments shipped since the timestamp", :vcr do
+        data = Fosdick::Shipment.all(shipped_on_min: "2010-02-24T12:17:09-05:00", per_page: 3)
 
-      expect(data.map(&:class).uniq).to eq [Fosdick::Shipment]
-      expect(data.size).to eq 3
+        expect(data.map(&:class).uniq).to eq [Fosdick::Shipment]
+        expect(data.size).to eq 3
+      end
     end
 
     context "given an external_order_num" do

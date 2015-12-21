@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/shipments.json?per_page=3&updated_at_min=2015-02-24T12%3A17%3A09-05%3A00
+    uri: https://www.customerstatus.com/fosdickapi/shipments.json?per_page=3&shipped_on_min=2010-02-24T12%3A17%3A09-05%3A00
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 21 Dec 2015 22:24:46 GMT
+      - Mon, 21 Dec 2015 22:59:00 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -41,5 +41,5 @@ http_interactions:
         SMART POST"}]},{"fosdick_order_num":"99901201506460008","external_order_num":"9991011","ship_date":"2015-02-06","trackings":[{"tracking_num":"9274899998944526831996","carrier_code":"92","carrier_name":"FEDEX
         SMART POST"}]}]'
     http_version: 
-  recorded_at: Mon, 21 Dec 2015 22:24:45 GMT
+  recorded_at: Mon, 21 Dec 2015 22:59:00 GMT
 recorded_with: VCR 3.0.1

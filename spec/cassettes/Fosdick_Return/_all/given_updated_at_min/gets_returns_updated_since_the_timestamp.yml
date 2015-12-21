@@ -17,7 +17,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 21 Dec 2015 21:44:17 GMT
+      - Mon, 21 Dec 2015 22:57:43 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -38,5 +38,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"},{"sku":"20PACC001","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":1,"available_quantity":-1,"updated_at":"2015-02-24T12:17:09.613-05:00"}]'
     http_version: 
-  recorded_at: Mon, 21 Dec 2015 21:44:17 GMT
+  recorded_at: Mon, 21 Dec 2015 22:57:43 GMT
 recorded_with: VCR 3.0.1
