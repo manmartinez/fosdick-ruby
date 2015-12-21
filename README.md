@@ -1,8 +1,6 @@
 # Fosdick
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fosdick`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby gem wraps the Fosdick Fulfillment API.
 
 ## Installation
 
@@ -16,13 +14,77 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
 
-    $ gem install fosdick
+## Configuration
+
+You'll need to configure Fosdick with your settings:
+
+```ruby
+Fosdick.configure do |config|
+  config.client_id = ENV['FOSDICK_CLIENT_ID']
+  config.username = ENV['FOSDICK_USERNAME']
+  config.password = ENV['FOSDICK_PASSWORD']
+end
+```
+
+If you're using this gem in a Rails app, you'll probably want to put this config in an initializer.
 
 ## Usage
 
-TODO: Write usage instructions here
+## Parameters
+
+### Timestamps
+
+Any resource can be filtered by `updated_at_min` and `updated_at_max` to only get records updated after or before a timestamp. For example, your application might keep track of the last time it fetched inventory data, and provide that timestamp for `updated_at_min` to only get records updated since then.
+
+### Pagination
+
+By default, all resources will be fetched by default. However, in case there's a lot of data, any resource can be fetched page by page using the `page` and `per_page` options. For example: `Fosdick::Inventory.all(per_page: 30, page: 2)`.
+
+## Resources
+
+### Inventory
+
+```ruby
+Fosdick::Inventory.all(params)
+```
+
+### Returns
+
+```ruby
+Fosdick::Return.all(params)
+```
+
+Parameters:
+
+* `returned_at_min`
+* `returned_at_max`
+
+### Shipments
+
+```ruby
+Fosdick::Shipment.all(params)
+```
+
+Parameters:
+
+* `shipped_on_min` - fetches shipments shipped since this timestamp
+* `shipped_on_max` - fetches shipments shipped until this timestamp
+* `fosdick_order_num` - fetches shipment for a specific order
+* `external_order_num` - fetches shipment for a specific order
+
+### Shipment Detail
+
+```ruby
+Fosdick::ShipmentDetail.all(params)
+```
+
+Parameters:
+
+* `shipped_on_min` - fetches shipment detail for shipments shipped since this timestamp
+* `shipped_on_max` - fetches shipment detail for shipments shipped until this timestamp
+* `fosdick_order_num` - fetches shipment for a specific order
+* `external_order_num` - fetches shipment for a specific order
 
 ## Development
 
