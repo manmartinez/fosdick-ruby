@@ -3,6 +3,8 @@ require "fosdick/configuration"
 require "fosdick/errors"
 require "fosdick/inventory"
 require "fosdick/return"
+require "fosdick/tracking"
+require "fosdick/shipment"
 
 require "faraday"
 require "json"
