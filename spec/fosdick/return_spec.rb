@@ -38,4 +38,19 @@ describe Fosdick::Return do
       end
     end
   end
+
+  describe "ReasonCodes" do
+    it "defines constants for valid reason codes" do
+      expect(Fosdick::Return::ReasonCodes::ALL).to eq %w{01 02 03 04 05 06 07 08 09}
+      expect(Fosdick::Return::ReasonCodes::UNDELIVERABLE).to eq '01'
+      expect(Fosdick::Return::ReasonCodes::DEFECTIVE).to eq '02'
+      expect(Fosdick::Return::ReasonCodes::WRONG_ITEM).to eq '03'
+      expect(Fosdick::Return::ReasonCodes::NO_LONGER_WANTED).to eq '04'
+      expect(Fosdick::Return::ReasonCodes::NEVER_ORDERED).to eq '05'
+      expect(Fosdick::Return::ReasonCodes::REFUSED).to eq '06'
+      expect(Fosdick::Return::ReasonCodes::NO_REASON_GIVEN).to eq '07'
+      expect(Fosdick::Return::ReasonCodes::WRONG_SIZE_OR_COLOR).to eq '08'
+      expect(Fosdick::Return::ReasonCodes::OTHER).to eq '09'
+    end
+  end
 end
