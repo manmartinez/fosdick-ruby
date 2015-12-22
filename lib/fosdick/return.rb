@@ -4,15 +4,15 @@ module Fosdick
 
     module ReasonCodes
       ALL = [
-        UNDELIVERABLE       = '01'.freeze,
-        DEFECTIVE           = '02'.freeze,
-        WRONG_ITEM          = '03'.freeze,
-        NO_LONGER_WANTED    = '04'.freeze,
-        NEVER_ORDERED       = '05'.freeze,
-        REFUSED             = '06'.freeze,
-        NO_REASON_GIVEN     = '07'.freeze,
-        WRONG_SIZE_OR_COLOR = '08'.freeze,
-        OTHER               = '09'.freeze,
+        UNDELIVERABLE       = '1'.freeze,
+        DEFECTIVE           = '2'.freeze,
+        WRONG_ITEM          = '3'.freeze,
+        NO_LONGER_WANTED    = '4'.freeze,
+        NEVER_ORDERED       = '5'.freeze,
+        REFUSED             = '6'.freeze,
+        NO_REASON_GIVEN     = '7'.freeze,
+        WRONG_SIZE_OR_COLOR = '8'.freeze,
+        OTHER               = '9'.freeze,
       ].freeze
     end
 
@@ -30,8 +30,7 @@ module Fosdick
     attribute :updated_at, DateTime
 
     def self.all(options = {})
-      data = Fosdick.get("inventory", options)
-      data.map { |attributes| new(attributes) }
+      Fosdick::Resource.new(self, "returns").all(options)
     end
   end
 end

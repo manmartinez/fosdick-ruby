@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/inventory.json?page=2&per_page=1&returned_at_min=2015-02-24T12%3A17%3A09-05%3A00
+    uri: https://www.customerstatus.com/fosdickapi/returns.json?page=2&per_page=1&returned_on_min=2014-01-01T12%3A17%3A09-05%3A00
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 21 Dec 2015 22:57:45 GMT
+      - Tue, 22 Dec 2015 23:04:42 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -33,10 +33,11 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '175'
+      - '319'
     body:
       encoding: ASCII-8BIT
-      string: '[{"sku":"20PAC1502","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":21,"available_quantity":-21,"updated_at":"2015-02-24T12:16:45.083-05:00"}]'
+      string: '[{"fosdick_order_num":"99904201435124087","external_order_num":"986602","sku":"91532","line_item":4,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":2,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:02.973-05:00"}]'
     http_version: 
-  recorded_at: Mon, 21 Dec 2015 22:57:44 GMT
+  recorded_at: Tue, 22 Dec 2015 23:04:41 GMT
 recorded_with: VCR 3.0.1

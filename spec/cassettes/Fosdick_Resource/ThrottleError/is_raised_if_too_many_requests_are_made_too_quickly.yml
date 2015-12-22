@@ -1,0 +1,471 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:19 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:18 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:19 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:19 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:20 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:19 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:20 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:20 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:21 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:21 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:22 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:22 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:23 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:23 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:24 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:24 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:26 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:25 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:27 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:26 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:28 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '172'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"}]'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:27 GMT
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/inventory.json?per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 429
+      message: 
+    headers:
+      Date:
+      - Tue, 22 Dec 2015 22:50:28 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '31'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":"Call limit exceeded"}'
+    http_version: 
+  recorded_at: Tue, 22 Dec 2015 22:50:28 GMT
+recorded_with: VCR 3.0.1

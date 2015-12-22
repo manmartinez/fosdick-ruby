@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/inventory.json?updated_at_min=2015-02-24T12%3A17%3A09-05%3A00
+    uri: https://www.customerstatus.com/fosdickapi/returns.json?per_page=3&updated_at_min=2015-02-24T12%3A17%3A09-05%3A00
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Mon, 21 Dec 2015 22:57:43 GMT
+      - Tue, 22 Dec 2015 23:04:41 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -33,10 +33,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '344'
+      - '955'
     body:
       encoding: ASCII-8BIT
-      string: '[{"sku":"20PACC002","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":0,"available_quantity":0,"updated_at":"2015-02-24T12:17:29.477-05:00"},{"sku":"20PACC001","available":false,"ct_quantity":0,"nv_quantity":0,"other_quantity":0,"committed":1,"available_quantity":-1,"updated_at":"2015-02-24T12:17:09.613-05:00"}]'
+      string: '[{"fosdick_order_num":"99904201435221005","external_order_num":"986918","sku":"92432","line_item":3,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":0,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:33.817-05:00"},{"fosdick_order_num":"99904201435129010","external_order_num":"986700","sku":"91132","line_item":1,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":2,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:20.473-05:00"},{"fosdick_order_num":"99904201435124087","external_order_num":"986602","sku":"91532","line_item":4,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":2,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:02.973-05:00"}]'
     http_version: 
-  recorded_at: Mon, 21 Dec 2015 22:57:43 GMT
+  recorded_at: Tue, 22 Dec 2015 23:04:41 GMT
 recorded_with: VCR 3.0.1

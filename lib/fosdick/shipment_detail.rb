@@ -12,8 +12,7 @@ module Fosdick
     attribute :trackings, Array[Fosdick::Tracking]
 
     def self.all(options = {})
-      data = Fosdick.get("shipmentdetail", options)
-      data.map { |attributes| new(attributes) }
+      Fosdick::Resource.new(self, "shipmentdetail").all(options)
     end
   end
 end

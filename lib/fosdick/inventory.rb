@@ -12,8 +12,7 @@ module Fosdick
     attribute :updated_at, DateTime
 
     def self.all(options = {})
-      data = Fosdick.get("inventory", options)
-      data.map { |attributes| new(attributes) }
+      Fosdick::Resource.new(self, "inventory").all(options)
     end
   end
 end
