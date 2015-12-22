@@ -1,4 +1,8 @@
 language: ruby
 rvm:
   - 2.2.4
+  - ruby-head
 before_install: gem install bundler -v 1.11.2
+matrix:
+  allow_failures:
+    - rvm: ruby-head
