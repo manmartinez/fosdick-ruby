@@ -51,6 +51,11 @@ By default, all resources will be fetched by default. However, in case there's a
 Fosdick::Inventory.all(params)
 ```
 
+Parameter:
+
+* `updated_at_min`
+* `updated_at_max`
+
 ### Returns
 
 ```ruby
@@ -59,6 +64,8 @@ Fosdick::Return.all(params)
 
 Parameters:
 
+* `updated_at_min`
+* `updated_at_max`
 * `returned_at_min`
 * `returned_at_max`
 
@@ -70,6 +77,8 @@ Fosdick::Shipment.all(params)
 
 Parameters:
 
+* `updated_at_min`
+* `updated_at_max`
 * `shipped_on_min` - fetches shipments shipped since this timestamp
 * `shipped_on_max` - fetches shipments shipped until this timestamp
 * `fosdick_order_num` - fetches shipment for a specific order
@@ -83,6 +92,8 @@ Fosdick::ShipmentDetail.all(params)
 
 Parameters:
 
+* `updated_at_min`
+* `updated_at_max`
 * `shipped_on_min` - fetches shipment detail for shipments shipped since this timestamp
 * `shipped_on_max` - fetches shipment detail for shipments shipped until this timestamp
 * `fosdick_order_num` - fetches shipment for a specific order
