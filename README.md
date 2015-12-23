@@ -2,7 +2,7 @@
 
 This Ruby gem wraps the Fosdick Fulfillment API.
 
-[![Build Status](https://travis-ci.org/teamlaunch/fosdick.svg?branch=master)](https://travis-ci.org/teamlaunch/fosdick)
+[![Build Status](https://travis-ci.org/teamlaunch/fosdick-ruby.svg?branch=master)](https://travis-ci.org/teamlaunch/fosdick-ruby)
 
 ## Installation
 
