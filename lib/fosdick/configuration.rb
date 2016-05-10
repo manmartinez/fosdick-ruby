@@ -5,6 +5,7 @@ module Fosdick
     include Virtus.model
 
     attribute :client_id, String
+    attribute :client_name, String, default: "test"
     attribute :username, String
     attribute :password, String
 

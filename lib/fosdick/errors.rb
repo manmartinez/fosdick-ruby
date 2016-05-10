@@ -5,4 +5,6 @@ module Fosdick
   class AuthenticationError < ApiError; end
   class NotFoundError < ApiError; end
   class ThrottleError < ApiError; end
+  class InvalidError < ApiError; end
+  class FailureError < ApiError; end
 end
