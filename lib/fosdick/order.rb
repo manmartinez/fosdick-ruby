@@ -49,16 +49,16 @@ module Fosdick
     attribute :email, String, required: true
     attribute :use_as_billing, String, required: false
 
-    attribute :bill_firstname, String
-    attribute :bill_lastname, String
-    attribute :bill_address1, String
+    attribute :bill_firstname, String, required: false
+    attribute :bill_lastname, String, required: false
+    attribute :bill_address1, String, required: false
     attribute :bill_address2, String, required: false
     attribute :bill_address3, String, required: false
-    attribute :bill_city, String
-    attribute :bill_state, String
+    attribute :bill_city, String, required: false
+    attribute :bill_state, String, required: false
     attribute :bill_state_other, String, required: false # province (if bill_state is blank)
-    attribute :bill_zip, String
-    attribute :bill_country, String, default: Countries::US
+    attribute :bill_zip, String, required: false
+    attribute :bill_country, String, default: Countries::US, required: false
     attribute :bill_phone, String, required: false
 
     attribute :custom1, String, required: false # 100 chars
