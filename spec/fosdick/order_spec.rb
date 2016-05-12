@@ -22,7 +22,10 @@ describe Fosdick::Order do
       bill_zip: "11332",
       payment_type: 5,
       bill_city: "Gotham",
-      items: [{ inv: 1, qty: 3, price_per: 1, num_of_payments: 1 }],
+      items: [
+        { inv: "sku-1", qty: 3, price_per: 1, num_of_payments: 1 },
+        { inv: "sku-2", qty: 2, price_per: 2, num_of_payments: 1 }
+      ],
       total: 3.0
     }
   end
@@ -35,9 +38,11 @@ describe Fosdick::Order do
 
     it "should properly set the line item data" do
       order = Fosdick::Order.new(@attributes)
-      expect(order.build_payload).to include "Items=1"
-      expect(order.build_payload).to include "Inv1=1"
+      expect(order.build_payload).to include "Items=2"
+      expect(order.build_payload).to include "Inv1=sku-1"
       expect(order.build_payload).to include "Qty1=3"
+      expect(order.build_payload).to include "Inv2=sku-2"
+      expect(order.build_payload).to include "Qty2=2"
     end
   end
 
@@ -60,12 +65,5 @@ describe Fosdick::Order do
       @attributes.delete(:ship_lastname)
       expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Virtus::CoercionError)
     end
-
-    # it "POSTs the order to Fosdick and fails", vcr: { record: :none, cassette_name: "orders/create#invalid" } do
-    #   @attributes[:external_id] = 1233
-    #   @attributes[:ship_firstname] = ""
-    #   @attributes[:ship_lastname] = ""
-    #   expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Fosdick::InvalidError)
-    # end
   end
 end
