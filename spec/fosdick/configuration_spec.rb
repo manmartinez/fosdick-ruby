@@ -4,15 +4,15 @@ describe Fosdick::Configuration do
   describe ".configure" do
     before do
       Fosdick.configure do |config|
-        config.client_id = "abc123"
+        config.client_code = "abc123"
         config.client_name = "test"
         config.username = "username1"
         config.password = "password1"
       end
     end
 
-    it "has a client id" do
-      expect(Fosdick.configuration.client_id).to eq "abc123"
+    it "has a client code" do
+      expect(Fosdick.configuration.client_code).to eq "abc123"
     end
 
     it "has a client name" do
