@@ -21,7 +21,7 @@ end
 RSpec.configure do |config|
   config.before do
     Fosdick.configure do |fosdick|
-      fosdick.client_id = ENV['FOSDICK_CLIENT_ID']
+      fosdick.client_code = ENV['FOSDICK_CLIENT_CODE']
       fosdick.client_name = ENV['FOSDICK_CLIENT_NAME']
       fosdick.username = ENV['FOSDICK_USERNAME']
       fosdick.password = ENV['FOSDICK_PASSWORD']

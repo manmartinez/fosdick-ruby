@@ -22,7 +22,8 @@ You'll need to configure Fosdick with your settings:
 
 ```ruby
 Fosdick.configure do |config|
-  config.client_id = ENV['FOSDICK_CLIENT_ID']
+  config.client_code = ENV['FOSDICK_CLIENT_CODE']
+  config.client_name = ENV['FOSDICK_CLIENT_NAME']
   config.username = ENV['FOSDICK_USERNAME']
   config.password = ENV['FOSDICK_PASSWORD']
 end
