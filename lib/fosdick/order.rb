@@ -15,8 +15,11 @@ module Fosdick
       ]
     end
 
-    attribute :client_code, String
-    attribute :test, String, required: false
+    attribute :client_code, String,
+      default: lambda { |_order, _att| Fosdick.configuration.client_code }
+
+    attribute :test, String,
+      default: lambda { |_order, _att| Fosdick.configuration.test_mode? ? "Y" : "N" }
 
     attribute :subtotal, Money # subtotal of line items
     attribute :discounts, Money, default: 0 # discount applied to subtotal (negative value)
@@ -109,16 +112,21 @@ module Fosdick
 
     def build_payload
       payload = attributes.delete_if { |k, v| v.nil? }
+
+      # handle order line items
       items = payload.delete(:items)
       payload[:items] = items.count
       payload = payload.merge(build_items(items))
-      payload = payload.map { |k, v| [attribute_key(k), v] }
+
+      # convert keys from snake_case to CamelCase
+      payload = payload.map { |k, v| [camelize(k), v] }
+
       URI.encode_www_form payload
     end
 
     private
 
-    def attribute_key(attribute)
+    def camelize(attribute)
       attribute.to_s.split('_').map { |w| w.capitalize }.join
     end
 
@@ -163,9 +171,7 @@ module Fosdick
     end
 
     def configuration
-      @configuration ||= Configuration.new
+      Fosdick.configuration
     end
-
-
   end
 end
