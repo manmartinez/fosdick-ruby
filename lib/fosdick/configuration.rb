@@ -8,6 +8,7 @@ module Fosdick
     attribute :client_name, String, default: "test"
     attribute :username, String
     attribute :password, String
+    attribute :test_mode, Boolean, default: true
 
     attribute :host, String, default: "https://www.customerstatus.com/fosdickapi/"
   end

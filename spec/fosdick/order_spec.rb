@@ -4,8 +4,6 @@ describe Fosdick::Order do
   before do
     @attributes = {
       email: "test@test.net",
-      client_code: "ad54LIADFJ2754",
-      test: "Y",
       external_id: "2316",
       subtotal: 3.0,
       ad_code: "ECOMM",
@@ -18,10 +16,10 @@ describe Fosdick::Order do
       bill_firstname: "Lucius",
       bill_lastname: "Fox",
       bill_address1: "33 Wayne Ent Drive",
+      bill_city: "Gotham",
       bill_state: "NY",
       bill_zip: "11332",
       payment_type: 5,
-      bill_city: "Gotham",
       items: [
         { inv: "sku-1", qty: 3, price_per: 1, num_of_payments: 1 },
         { inv: "sku-2", qty: 2, price_per: 2, num_of_payments: 1 }
@@ -31,18 +29,50 @@ describe Fosdick::Order do
   end
 
   context "build_payload" do
-    it "should return the proper string format" do
+    before do
       order = Fosdick::Order.new(@attributes)
-      expect(order.build_payload).to include "ShipAddress1=12+Manor+Drive"
+      @payload = order.build_payload
     end
 
-    it "should properly set the line item data" do
+    it "has all the basic fields form-encoded" do
+      expect(@payload).to have_form_encoded(
+        "Email" => "test@test.net",
+        "ExternalId" => "2316",
+        "Subtotal" => 3.0,
+        "Total" => 3.0,
+        "AdCode" => "ECOMM",
+        "ShipFirstname" => "Bruce",
+        "ShipLastname" => "Wayne",
+        "ShipAddress1" => "12 Manor Drive",
+        "ShipCity" => "Gotham",
+        "ShipState" => "NY",
+        "ShipZip" => "11223",
+        "BillFirstname" => "Lucius",
+        "BillLastname" => "Fox",
+        "BillAddress1" => "33 Wayne Ent Drive",
+        "BillCity" => "Gotham",
+        "BillState" => "NY",
+        "BillZip" => "11332",
+        "PaymentType" => 5,
+      )
+    end
+
+    it "includes form-encoded default client code and test flag" do
+      expect(@payload).to have_form_encoded(
+        "ClientCode" => Fosdick.configuration.client_code,
+        "Test" => "Y"
+      )
+    end
+
+    it "has line items form-encoded" do
       order = Fosdick::Order.new(@attributes)
-      expect(order.build_payload).to include "Items=2"
-      expect(order.build_payload).to include "Inv1=sku-1"
-      expect(order.build_payload).to include "Qty1=3"
-      expect(order.build_payload).to include "Inv2=sku-2"
-      expect(order.build_payload).to include "Qty2=2"
+      expect(@payload).to have_form_encoded(
+        "Items" => 2,
+        "Inv1" => "sku-1",
+        "Qty1" => 3,
+        "Inv2" => "sku-2",
+        "Qty2" => 2,
+      )
     end
   end
 

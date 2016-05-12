@@ -11,6 +11,10 @@ describe Fosdick::Configuration do
       end
     end
 
+    it "defaults to test mode" do
+      expect(Fosdick.configuration.test_mode?).to be true
+    end
+
     it "has a client code" do
       expect(Fosdick.configuration.client_code).to eq "abc123"
     end
