@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.customerstatus.com/fosdickapi/purchaseorder.json
+    body:
+      encoding: UTF-8
+      string: '{"po_num":"100002","line_num":1,"item":"1006A-301-B","description":"pocket
+        tee","class_code":"RI","qty":null,"warehouse":"CT","expected_delivery":"2016-06-15"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic TEFVTkNIS0lEUzUxOTpUc3BsMWFXMg==
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 422
+      message: 
+    headers:
+      Date:
+      - Tue, 17 May 2016 21:30:44 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '32'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":"qty must be provided"}'
+    http_version: 
+  recorded_at: Tue, 17 May 2016 21:30:44 GMT
+recorded_with: VCR 3.0.1
