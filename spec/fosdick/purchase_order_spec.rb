@@ -10,7 +10,10 @@ describe Fosdick::PurchaseOrder do
       class_code: "RI",
       qty: 41,
       warehouse: "CT",
-      expected_delivery: "2016-06-15"
+      expected_delivery: "2016-06-15",
+      custom1: "BOYS", # DIVISION/GENDER
+      custom2: "PACIFIC", # COLOR
+      custom3: "2/3", # SIZE
     }
   end
 

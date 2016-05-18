@@ -11,6 +11,19 @@ module Fosdick
     attribute :qty, Integer
     attribute :warehouse, String
     attribute :expected_delivery, Date
+    attribute :po_date, Date
+    attribute :vendor, String
+    attribute :shipper, String
+    attribute :upc, String
+    attribute :cogs, Integer
+    attribute :country_of_origin, String
+    attribute :weight, Integer
+    attribute :width, Integer
+    attribute :height, Integer
+    attribute :length, Integer
+    attribute :custom1, String
+    attribute :custom2, String
+    attribute :custom3, String
 
     def create
       connection.post do |req|

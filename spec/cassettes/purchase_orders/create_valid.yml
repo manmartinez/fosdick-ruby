@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"po_num":"100002","line_num":1,"item":"1006A-301-B","description":"pocket
-        tee","class_code":"RI","qty":41,"warehouse":"CT","expected_delivery":"2016-06-15"}'
+        tee","class_code":"RI","qty":41,"warehouse":"CT","expected_delivery":"2016-06-15","po_date":null,"vendor":null,"shipper":null,"upc":null,"cogs":null,"country_of_origin":null,"weight":null,"width":null,"height":null,"length":null,"custom1":"BOYS","custom2":"PACIFIC","custom3":"2/3"}'
     headers:
       User-Agent:
       - Faraday v0.9.2
@@ -20,7 +20,7 @@ http_interactions:
       message: 
     headers:
       Date:
-      - Tue, 17 May 2016 21:30:42 GMT
+      - Wed, 18 May 2016 17:40:58 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -41,5 +41,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"success":"Purchase Order Received"}'
     http_version: 
-  recorded_at: Tue, 17 May 2016 21:30:42 GMT
+  recorded_at: Wed, 18 May 2016 17:40:58 GMT
 recorded_with: VCR 3.0.1
