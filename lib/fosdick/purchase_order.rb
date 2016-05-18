@@ -15,12 +15,12 @@ module Fosdick
     attribute :vendor, String
     attribute :shipper, String
     attribute :upc, String
-    attribute :cogs, Integer
+    attribute :cogs, Float
     attribute :country_of_origin, String
-    attribute :weight, Integer
-    attribute :width, Integer
-    attribute :height, Integer
-    attribute :length, Integer
+    attribute :weight, Float
+    attribute :width, Float
+    attribute :height, Float
+    attribute :length, Float
     attribute :custom1, String
     attribute :custom2, String
     attribute :custom3, String
