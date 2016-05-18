@@ -7,9 +7,9 @@ module Fosdick
     attribute :line_num, Integer
     attribute :item, String
     attribute :description, String
-    attribute :class_code, String
+    attribute :class_code, String, default: "RI"
     attribute :qty, Integer
-    attribute :warehouse, String
+    attribute :warehouse, String, default: "CT"
     attribute :expected_delivery, Date
     attribute :po_date, Date
     attribute :vendor, String
