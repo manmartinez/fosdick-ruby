@@ -4,8 +4,8 @@ describe Fosdick::Order do
   before do
     @attributes = {
       email: "test@test.net",
-      external_id: "2316",
-      subtotal: 3.0,
+      external_id: "5584",
+      subtotal: 7.0,
       ad_code: "ECOMM",
       ship_firstname: "Bruce",
       ship_lastname: "Wayne",
@@ -22,9 +22,9 @@ describe Fosdick::Order do
       payment_type: 5,
       items: [
         { inv: "sku-1", qty: 3, price_per: 1, num_of_payments: 1 },
-        { inv: "sku-2", qty: 2, price_per: 2, num_of_payments: 1 }
+        { inv: "sku-3", qty: 2, price_per: 2, num_of_payments: 1 }
       ],
-      total: 3.0
+      total: 7.0
     }
   end
 
@@ -37,9 +37,9 @@ describe Fosdick::Order do
     it "has all the basic fields form-encoded" do
       expect(@payload).to have_form_encoded(
         "Email" => "test@test.net",
-        "ExternalId" => "2316",
-        "Subtotal" => 3.0,
-        "Total" => 3.0,
+        "ExternalId" => "5584",
+        "Subtotal" => 7.0,
+        "Total" => 7.0,
         "AdCode" => "ECOMM",
         "ShipFirstname" => "Bruce",
         "ShipLastname" => "Wayne",
@@ -70,7 +70,7 @@ describe Fosdick::Order do
         "Items" => 2,
         "Inv1" => "sku-1",
         "Qty1" => 3,
-        "Inv2" => "sku-2",
+        "Inv2" => "sku-3",
         "Qty2" => 2,
       )
     end
@@ -79,7 +79,7 @@ describe Fosdick::Order do
   context "given a valid order" do
     it "POSTs the order to Fosdick", vcr: { record: :none, cassette_name: "orders/create#valid" } do
       result = Fosdick::Order.new(@attributes).create
-      expect(result[:external_id]).to eq("2316")
+      expect(result[:external_id]).to eq("5584")
     end
 
     it "returns a an order id from fosdick", vcr: { record: :none, cassette_name: "orders/create#valid" } do
