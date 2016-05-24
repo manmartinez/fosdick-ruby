@@ -171,7 +171,7 @@ module Fosdick
     end
 
     def configuration
-      @configuration ||= Configuration.new
+      Fosdick.configuration
     end
   end
 end
