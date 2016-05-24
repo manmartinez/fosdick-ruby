@@ -1,4 +1,4 @@
-if ENV['FOSDICK_USERNAME'].nil?
+if ENV['FOSDICK_USERNAME'].nil? || ENV['FOSDICK_CLIENT_CODE'].nil?
   raise "Set up your .env file and use `foreman run rake`!"
 end
 
