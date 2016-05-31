@@ -70,6 +70,8 @@ module Fosdick
     attribute :custom4, String, required: false # 300 chars
     attribute :custom5, String, required: false # 300 chars
 
+    attribute :custom_fields, Hash[Symbol => String]
+
     attribute :payment_type, String
 
     # Credit card
@@ -118,8 +120,17 @@ module Fosdick
       payload[:items] = items.count
       payload = payload.merge(build_items(items))
 
+      # handle custom fields
+      custom_fields = payload.delete(:custom_fields)
+
       # convert keys from snake_case to CamelCase
       payload = payload.map { |k, v| [camelize(k), v] }
+
+      if custom_fields
+        custom_fields.each do |k, v|
+          payload << ["Custom_#{camelize(k)}", v]
+        end
+      end
 
       URI.encode_www_form payload
     end

@@ -4,7 +4,7 @@ describe Fosdick::Order do
   before do
     @attributes = {
       email: "test@test.net",
-      external_id: "5584",
+      external_id: "5587",
       subtotal: 7.0,
       ad_code: "ECOMM",
       ship_firstname: "Bruce",
@@ -24,7 +24,8 @@ describe Fosdick::Order do
         { inv: "sku-1", qty: 3, price_per: 1, num_of_payments: 1 },
         { inv: "sku-3", qty: 2, price_per: 2, num_of_payments: 1 }
       ],
-      total: 7.0
+      total: 7.0,
+      custom_fields: { kid_name: "Sam", superhero: "Batman", blah: 3 }
     }
   end
 
@@ -37,7 +38,7 @@ describe Fosdick::Order do
     it "has all the basic fields form-encoded" do
       expect(@payload).to have_form_encoded(
         "Email" => "test@test.net",
-        "ExternalId" => "5584",
+        "ExternalId" => "5587",
         "Subtotal" => 7.0,
         "Total" => 7.0,
         "AdCode" => "ECOMM",
@@ -65,7 +66,6 @@ describe Fosdick::Order do
     end
 
     it "has line items form-encoded" do
-      order = Fosdick::Order.new(@attributes)
       expect(@payload).to have_form_encoded(
         "Items" => 2,
         "Inv1" => "sku-1",
@@ -74,12 +74,20 @@ describe Fosdick::Order do
         "Qty2" => 2,
       )
     end
+
+    it "has custom fields" do
+      expect(@payload).to have_form_encoded(
+        "Custom_KidName" => "Sam",
+        "Custom_Superhero" => "Batman",
+        "Custom_Blah" => 3
+      )
+    end
   end
 
   context "given a valid order" do
     it "POSTs the order to Fosdick", vcr: { record: :none, cassette_name: "orders/create#valid" } do
       result = Fosdick::Order.new(@attributes).create
-      expect(result[:external_id]).to eq("5584")
+      expect(result[:external_id]).to eq("5587")
     end
 
     it "returns a an order id from fosdick", vcr: { record: :none, cassette_name: "orders/create#valid" } do
