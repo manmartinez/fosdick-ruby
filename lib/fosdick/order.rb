@@ -64,6 +64,8 @@ module Fosdick
     attribute :bill_country, String, default: Countries::US, required: false
     attribute :bill_phone, String, required: false
 
+    attribute :kid_name, String
+
     attribute :custom1, String, required: false # 100 chars
     attribute :custom2, String, required: false # 100 chars
     attribute :custom3, String, required: false # 300 chars

@@ -7,6 +7,7 @@ describe Fosdick::Order do
       external_id: "5584",
       subtotal: 7.0,
       ad_code: "ECOMM",
+      kid_name: "Sam",
       ship_firstname: "Bruce",
       ship_lastname: "Wayne",
       ship_address1: "12 Manor Drive",
@@ -54,6 +55,7 @@ describe Fosdick::Order do
         "BillState" => "NY",
         "BillZip" => "11332",
         "PaymentType" => 5,
+        "KidName" => "Sam",
       )
     end
 
