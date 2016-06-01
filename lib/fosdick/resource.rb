@@ -9,6 +9,7 @@ module Fosdick
     end
 
     def all(params = {})
+      params = format_values(params)
       response = connection.get(endpoint_with_extension, params)
 
       if response.success?
@@ -61,6 +62,20 @@ module Fosdick
       body["error"] || response.body
     rescue JSON::ParserError
       response.body
+    end
+
+    def format_values(params)
+      Hash[params.map do |key, value|
+        [key, format_value(key, value)]
+      end]
+    end
+
+    def format_value(key, value)
+      if value.respond_to? :iso8601
+        value.iso8601
+      else
+        value
+      end
     end
   end
 end

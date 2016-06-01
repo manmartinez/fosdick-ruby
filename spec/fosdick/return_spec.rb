@@ -13,6 +13,18 @@ describe Fosdick::Return do
           {:fosdick_order_num=>"99904201435124087", :external_order_num=>"986602", :sku=>"91532", :line_item=>4, :external_line_item=>nil, :return_date=>Date.parse("2014-09-16"), :quantity_returned=>1, :quality=>2, :reason_code=>"4", :reason_description=>"No Longer Wanted", :action_requested=>"Refund", :updated_at=>DateTime.parse("2015-02-24T12:26:02.973-05:00")},
         ]
       end
+
+      it "gets returns updated since the given time", :vcr do
+        timestamp = Time.parse("2015-02-24T12:17:09-05:00")
+        data = Fosdick::Return.all(updated_at_min: timestamp, per_page: 3)
+
+        expect(data.map(&:class).uniq).to eq [Fosdick::Return]
+        expect(data.map(&:attributes)).to eq [
+          {:fosdick_order_num=>"99904201435221005", :external_order_num=>"986918", :sku=>"92432", :line_item=>3, :external_line_item=>nil, :return_date=>Date.parse("2014-09-16"), :quantity_returned=>1, :quality=>0, :reason_code=>"4", :reason_description=>"No Longer Wanted", :action_requested=>"Refund", :updated_at=>DateTime.parse("2015-02-24T12:26:33.817-05:00")},
+          {:fosdick_order_num=>"99904201435129010", :external_order_num=>"986700", :sku=>"91132", :line_item=>1, :external_line_item=>nil, :return_date=>Date.parse("2014-09-16"), :quantity_returned=>1, :quality=>2, :reason_code=>"4", :reason_description=>"No Longer Wanted", :action_requested=>"Refund", :updated_at=>DateTime.parse("2015-02-24T12:26:20.473-05:00")},
+          {:fosdick_order_num=>"99904201435124087", :external_order_num=>"986602", :sku=>"91532", :line_item=>4, :external_line_item=>nil, :return_date=>Date.parse("2014-09-16"), :quantity_returned=>1, :quality=>2, :reason_code=>"4", :reason_description=>"No Longer Wanted", :action_requested=>"Refund", :updated_at=>DateTime.parse("2015-02-24T12:26:02.973-05:00")},
+        ]
+      end
     end
 
     context "given returned_at_min" do

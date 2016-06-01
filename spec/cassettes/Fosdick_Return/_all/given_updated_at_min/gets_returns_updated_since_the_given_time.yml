@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.customerstatus.com/fosdickapi/returns.json?per_page=3&updated_at_min=2015-02-24T12%3A17%3A09-05%3A00
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - Basic Q0xJRU5UVEVTVDpURVNUUFcyMjQxNQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Wed, 01 Jun 2016 18:09:45 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-AspNet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '955'
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"fosdick_order_num":"99904201435221005","external_order_num":"986918","sku":"92432","line_item":3,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":0,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:33.817-05:00"},{"fosdick_order_num":"99904201435129010","external_order_num":"986700","sku":"91132","line_item":1,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":2,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:20.473-05:00"},{"fosdick_order_num":"99904201435124087","external_order_num":"986602","sku":"91532","line_item":4,"external_line_item":null,"return_date":"2014-09-16","quantity_returned":1,"quality":2,"reason_code":"4","reason_description":"No
+        Longer Wanted","action_requested":"Refund","updated_at":"2015-02-24T12:26:02.973-05:00"}]'
+    http_version: 
+  recorded_at: Wed, 01 Jun 2016 18:09:44 GMT
+recorded_with: VCR 3.0.1
