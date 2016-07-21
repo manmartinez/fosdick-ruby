@@ -101,6 +101,16 @@ module Fosdick
     attribute :amz_auth_date, Date, required: false
     attribute :amz_auth_amount, Money, required: false
 
+    def self.truncate_attribute(attribute, limit:)
+      define_method "#{attribute}=" do |value|
+        super(value.to_s.slice(0, limit))
+      end
+    end
+
+    truncate_attribute :ship_city, limit: 13
+    truncate_attribute :bill_city, limit: 13
+
+
     def create
       payload = build_payload
       response = post(payload)

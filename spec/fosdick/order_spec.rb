@@ -10,13 +10,13 @@ describe Fosdick::Order do
       ship_firstname: "Bruce",
       ship_lastname: "Wayne",
       ship_address1: "12 Manor Drive",
-      ship_city: "Gotham",
+      ship_city: "Woodland Hills",
       ship_state: "NY",
       ship_zip: "11223",
       bill_firstname: "Lucius",
       bill_lastname: "Fox",
       bill_address1: "33 Wayne Ent Drive",
-      bill_city: "Gotham",
+      bill_city: "Woodland Hills",
       bill_state: "NY",
       bill_zip: "11332",
       payment_type: 5,
@@ -35,7 +35,7 @@ describe Fosdick::Order do
       @payload = order.build_payload
     end
 
-    it "has all the basic fields form-encoded" do
+    it "has all the basic fields truncated and form-encoded" do
       expect(@payload).to have_form_encoded(
         "Email" => "test@test.net",
         "ExternalId" => "5587",
@@ -45,13 +45,13 @@ describe Fosdick::Order do
         "ShipFirstname" => "Bruce",
         "ShipLastname" => "Wayne",
         "ShipAddress1" => "12 Manor Drive",
-        "ShipCity" => "Gotham",
+        "ShipCity" => "Woodland Hill",
         "ShipState" => "NY",
         "ShipZip" => "11223",
         "BillFirstname" => "Lucius",
         "BillLastname" => "Fox",
         "BillAddress1" => "33 Wayne Ent Drive",
-        "BillCity" => "Gotham",
+        "BillCity" => "Woodland Hill",
         "BillState" => "NY",
         "BillZip" => "11332",
         "PaymentType" => 5,
