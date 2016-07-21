@@ -107,8 +107,36 @@ module Fosdick
       end
     end
 
+    truncate_attribute :shipping_method, limit: 12
+    truncate_attribute :ship_firstname, limit: 16
+    truncate_attribute :ship_lastname, limit: 22
+    truncate_attribute :ship_address1, limit: 30
+    truncate_attribute :ship_address2, limit: 30
+    truncate_attribute :ship_address3, limit: 30
     truncate_attribute :ship_city, limit: 13
+    truncate_attribute :ship_state, limit: 2
+    truncate_attribute :ship_state_other, limit: 20
+    truncate_attribute :ship_zip, limit: 11
+    truncate_attribute :ship_country, limit: 35
+    truncate_attribute :ship_phone, limit: 20
+    truncate_attribute :ship_fax, limit: 20
+    truncate_attribute :email, limit: 100
+    truncate_attribute :bill_firstname, limit: 16
+    truncate_attribute :bill_lastname, limit: 22
+    truncate_attribute :bill_address1, limit: 30
+    truncate_attribute :bill_address2, limit: 30
+    truncate_attribute :bill_address3, limit: 30
     truncate_attribute :bill_city, limit: 13
+    truncate_attribute :bill_state, limit: 2
+    truncate_attribute :bill_state_other, limit: 20
+    truncate_attribute :bill_zip, limit: 11
+    truncate_attribute :bill_country, limit: 35
+    truncate_attribute :bill_phone, limit: 20
+    truncate_attribute :custom1, limit: 100
+    truncate_attribute :custom2, limit: 100
+    truncate_attribute :custom3, limit: 300
+    truncate_attribute :custom4, limit: 300
+    truncate_attribute :custom5, limit: 300
 
 
     def create
