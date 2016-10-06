@@ -5,6 +5,7 @@ module Fosdick
     attribute :fosdick_order_num, String
     attribute :external_order_num, String
     attribute :ship_date, Date
+    attribute :return_tracking, String
     attribute :trackings, Array[Fosdick::Tracking]
 
     def self.all(options = {})
