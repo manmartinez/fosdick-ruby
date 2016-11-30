@@ -13,7 +13,7 @@ module Fosdick
     end
 
     def return_tracking=(return_tracking)
-      super return_tracking.strip
+      super return_tracking&.strip
     end
   end
 end

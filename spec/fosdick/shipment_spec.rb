@@ -9,6 +9,14 @@ describe Fosdick::Shipment do
 
       expect(shipment.return_tracking).to eq("RETURN")
     end
+
+    it "handles nil values" do
+      shipment = described_class.new
+
+      shipment.return_tracking = nil
+
+      expect(shipment.return_tracking).to eq(nil)
+    end
   end
 
   describe ".all", :vcr do

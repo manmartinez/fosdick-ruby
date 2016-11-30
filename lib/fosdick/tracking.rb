@@ -7,7 +7,7 @@ module Fosdick
     attribute :carrier_name, String
 
     def tracking_num=(tracking_num)
-      super tracking_num.strip
+      super tracking_num&.strip
     end
   end
 end
