@@ -11,5 +11,9 @@ module Fosdick
     def self.all(options = {})
       Fosdick::Resource.new(self, "shipments").all(options)
     end
+
+    def return_tracking=(return_tracking)
+      super return_tracking.strip
+    end
   end
 end

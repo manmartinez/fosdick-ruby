@@ -1,6 +1,16 @@
 require "spec_helper"
 
 describe Fosdick::Shipment do
+  describe '#return_tracking=' do
+    it "strips whitespace from the return tracking number" do
+      shipment = described_class.new
+
+      shipment.return_tracking = "\tRETURN "
+
+      expect(shipment.return_tracking).to eq("RETURN")
+    end
+  end
+
   describe ".all", :vcr do
     context "given shipped_on_min" do
       it "gets shipments shipped since the timestamp", :vcr do
