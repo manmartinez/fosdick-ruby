@@ -11,6 +11,7 @@ require "fosdick/return"
 require "fosdick/tracking"
 require "fosdick/shipment"
 require "fosdick/shipment_detail"
+require "fosdick/receipt"
 
 require "faraday"
 require "json"
