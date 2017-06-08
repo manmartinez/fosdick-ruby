@@ -4,7 +4,7 @@ module Fosdick
 
     attribute :date_time, DateTime
     attribute :warehouse, String
-    attribute :receiver_num, Integer
+    attribute :receiver_num, String
     attribute :container_num, String
     attribute :po_num, String
     attribute :carrier_name, String
