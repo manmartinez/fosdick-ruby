@@ -166,7 +166,7 @@ module Fosdick
 
       if custom_fields
         custom_fields.each do |k, v|
-          payload << ["Custom_#{camelize(k)}", v]
+          payload << ["Custom_#{k}", v]
         end
       end
 

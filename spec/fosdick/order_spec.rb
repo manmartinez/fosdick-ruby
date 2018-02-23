@@ -25,7 +25,7 @@ describe Fosdick::Order do
         { inv: "sku-3", qty: 2, price_per: 2, num_of_payments: 1 }
       ],
       total: 7.0,
-      custom_fields: { kid_name: "Sam", superhero: "Batman", blah: 3 }
+      custom_fields: { KID_NAME: "Sam", SUPERHERO: "Batman", BlAh: 3 }
     }
   end
 
@@ -75,11 +75,11 @@ describe Fosdick::Order do
       )
     end
 
-    it "has custom fields" do
+    it "has custom fields--appended unaltered to--'Custom_'" do
       expect(@payload).to have_form_encoded(
-        "Custom_KidName" => "Sam",
-        "Custom_Superhero" => "Batman",
-        "Custom_Blah" => 3
+        "Custom_KID_NAME" => "Sam",
+        "Custom_SUPERHERO" => "Batman",
+        "Custom_BlAh" => 3
       )
     end
   end
