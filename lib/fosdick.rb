@@ -34,7 +34,9 @@ module Fosdick
     conn = ::Faraday.new(:url => configuration.host) do |faraday|
       faraday.request  :url_encoded             # form-encode POST params
       # faraday.response :logger                  # log requests to STDOUT
-      faraday.adapter  :patron
+      faraday.adapter  :patron do |session|
+        session.ssl_version = 'SSLv3'
+      end
     end
 
     unless configuration.username.nil?
