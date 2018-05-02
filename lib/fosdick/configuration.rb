@@ -10,6 +10,6 @@ module Fosdick
     attribute :password, String
     attribute :test_mode, Boolean, default: true
 
-    attribute :host, String, default: "https://www.customerstatus.com/fosdickapi/"
+    attribute :host, String, default: "https://cs.fosdickcorp.com/fosdickapi/"
   end
 end
