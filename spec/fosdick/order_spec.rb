@@ -27,6 +27,10 @@ describe Fosdick::Order do
       total: 7.0,
       custom_fields: { KID_NAME: "Sam", SUPERHERO: "Batman", BlAh: 3 }
     }
+
+    Fosdick.configure do |config|
+      config.client_name = 'test'
+    end
   end
 
   context "build_payload" do

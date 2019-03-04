@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.customerstatus.com/fosdickapi/purchaseorder.json
+    uri: https://cs.fosdickcorp.com/fosdickapi/purchaseorder.json
     body:
       encoding: UTF-8
       string: '{"po_num":"100002","line_num":1,"item":"1006A-301-B","description":"pocket

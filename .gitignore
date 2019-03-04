@@ -11,3 +11,4 @@
 /.rspec
 /.env
 .DS_Store
+.idea/

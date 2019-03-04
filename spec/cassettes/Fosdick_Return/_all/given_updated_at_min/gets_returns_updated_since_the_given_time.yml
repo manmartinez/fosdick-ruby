@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/returns.json?per_page=3&updated_at_min=2015-02-24T12%3A17%3A09-05%3A00
+    uri: https://cs.fosdickcorp.com/fosdickapi/returns.json?per_page=3&updated_at_min=2015-02-24T12%3A17%3A09-05%3A00
     body:
       encoding: US-ASCII
       string: ''

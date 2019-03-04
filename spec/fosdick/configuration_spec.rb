@@ -29,7 +29,7 @@ describe Fosdick::Configuration do
     end
 
     it "has a default host" do
-      expect(Fosdick.configuration.host).to eq "https://www.customerstatus.com/fosdickapi/"
+      expect(Fosdick.configuration.host).to eq "https://cs.fosdickcorp.com/fosdickapi/"
     end
   end
 end
