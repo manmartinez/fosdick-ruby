@@ -7,4 +7,5 @@ module Fosdick
   class ThrottleError < ApiError; end
   class InvalidError < ApiError; end
   class FailureError < ApiError; end
+  class UnspecifiedError < ApiError; end
 end

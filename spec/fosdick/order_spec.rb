@@ -108,4 +108,14 @@ describe Fosdick::Order do
       expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Virtus::CoercionError)
     end
   end
+
+  context 'given a fosdick response with no error message body' do
+    it 'throws an instance of UnspecifiedError', vcr: {
+      record: :none,
+      cassette_name: 'orders/create#empty_error_string'
+    } do
+      @attributes[:external_id] = 1233
+      expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Fosdick::UnspecifiedError)
+    end
+  end
 end
