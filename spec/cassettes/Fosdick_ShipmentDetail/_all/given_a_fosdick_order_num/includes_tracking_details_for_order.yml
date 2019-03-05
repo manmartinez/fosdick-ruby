@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/shipments.json?fosdick_order_num=99901201506460009
+    uri: https://cs.fosdickcorp.com/fosdickapi/shipments.json?fosdick_order_num=99901201506460009
     body:
       encoding: US-ASCII
       string: ''

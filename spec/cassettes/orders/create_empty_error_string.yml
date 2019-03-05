@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.unitycart.com/test/cart/ipost.asp
+    body:
+      encoding: US-ASCII
+      string: ClientCode=ad54LIADFJ2754&Test=Y&Subtotal=3.0&Discounts=0.0&Postage=0.0&Tax=0.0&Total=3.0&ExternalId=1233&OrderType=WEB&AdCode=ECOMM&ShipAddress1=12+Manor+Drive&ShipCity=Gotham&ShipState=NY&ShipZip=11223&ShipCountry=US&BillFirstname=Lucius&BillLastname=Fox&BillAddress1=33+Wayne+Ent+Drive&BillCity=Gotham&BillState=NY&BillZip=11332&BillCountry=US&PaymentType=5&Items=1&Inv1=1&Qty1=3&PricePer1=1.0&NumOfPayments1=1&LineCustom1
+    headers:
+      Authorization:
+      - Basic TEFVTkNIS0lEUzUxOTpUc3BsMWFXMg==
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      cache-control:
+      - private
+      content-length:
+      - '0'
+      content-type:
+      - text/html
+      expires:
+      - Wed, 04 May 2016 17:28:42 GMT
+      server:
+      - Microsoft-IIS/7.5
+      set-cookie:
+      - ASPSESSIONIDSWRGGDHQ=ELFGBNEAEKBFHNALHNPOHGIJ; secure; path=/
+      x-powered-by:
+      - ASP.NET
+      x-frame-options:
+      - SAMEORIGIN
+      date:
+      - Wed, 04 May 2016 17:28:42 GMT
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 04 May 2016 17:29:05 GMT
+recorded_with: VCR 3.0.1

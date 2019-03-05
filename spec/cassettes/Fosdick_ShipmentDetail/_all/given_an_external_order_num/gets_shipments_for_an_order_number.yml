@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/shipments.json?external_order_num=9991012
+    uri: https://cs.fosdickcorp.com/fosdickapi/shipments.json?external_order_num=9991012
     body:
       encoding: US-ASCII
       string: ''

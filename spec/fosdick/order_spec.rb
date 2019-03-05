@@ -27,6 +27,10 @@ describe Fosdick::Order do
       total: 7.0,
       custom_fields: { KID_NAME: "Sam", SUPERHERO: "Batman", BlAh: 3 }
     }
+
+    Fosdick.configure do |config|
+      config.client_name = 'test'
+    end
   end
 
   context "build_payload" do
@@ -102,6 +106,16 @@ describe Fosdick::Order do
       @attributes.delete(:ship_firstname)
       @attributes.delete(:ship_lastname)
       expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Virtus::CoercionError)
+    end
+  end
+
+  context 'given a fosdick response with no error message body' do
+    it 'throws an instance of UnspecifiedError', vcr: {
+      record: :none,
+      cassette_name: 'orders/create#empty_error_string'
+    } do
+      @attributes[:external_id] = 1233
+      expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Fosdick::UnspecifiedError)
     end
   end
 end

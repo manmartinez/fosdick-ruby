@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.customerstatus.com/fosdickapi/receipts.json?per_page=3&updated_at_min=2017-05-01T00%3A00%3A00%2B00%3A00
+    uri: https://cs.fosdickcorp.com/fosdickapi/receipts.json?per_page=3&updated_at_min=2017-05-01T00%3A00%3A00%2B00%3A00
     body:
       encoding: US-ASCII
       string: ''

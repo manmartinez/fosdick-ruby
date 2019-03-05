@@ -194,6 +194,8 @@ module Fosdick
 
     def handle_error(response)
       errors = response.body.split("|").compact.slice(3, 2)
+      raise UnspecifiedError if errors.nil?
+
       case errors[0]
       when "Invalid"
         raise InvalidError, errors.last
