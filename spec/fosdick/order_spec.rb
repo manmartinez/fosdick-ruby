@@ -107,6 +107,13 @@ describe Fosdick::Order do
       @attributes.delete(:ship_lastname)
       expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Virtus::CoercionError)
     end
+
+    context "invalid error is dupicate" do
+      it "raises a DuplicateError", vcr: { record: :none, cassette_name: "orders/create#duplicate" } do
+        @attributes[:external_id] = 1234
+        expect { Fosdick::Order.new(@attributes).create }.to raise_exception(Fosdick::DuplicateError)
+      end
+    end
   end
 
   context 'given a fosdick response with no error message body' do

@@ -198,7 +198,12 @@ module Fosdick
 
       case errors[0]
       when "Invalid"
-        raise InvalidError, errors.last
+        last_error = errors.last
+        if last_error.include?('Duplicate ExternalId')
+          raise DuplicateError, last_error
+        end
+
+        raise InvalidError, last_error
       when "Auth"
         raise AuthenticationError, errors.last
       else
